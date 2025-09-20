@@ -64,4 +64,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Twilio OTP backend running on port ${PORT}`);
 });
-
+const authRoutes = require("./routes/auth");
+app.use("/auth", authRoutes);
